@@ -1,0 +1,23 @@
+<section>
+  <h1>Login</h1>
+
+  <form (ngSubmit)="submitState(localState.email, localState.pass)" >
+    <input
+      [value]="localState.email"
+      (input)="localState.email = $event.target.value"
+      placeholder="Email"
+      autofocus>
+
+    <input
+      [value]="localState.pass"
+      (input)="localState.pass = $event.target.value"
+      placeholder="Password">
+
+    <button>Submit</button>
+  </form>
+
+  <div>
+    <h1>Results</h1>
+    <pre>this.localState: {{ localState | json}}</pre>
+  </div>
+</section>
